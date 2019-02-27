@@ -1,5 +1,5 @@
 from keras.applications import inception_v3,imagenet_utils
-import cv2 
+import cv2
 import numpy as np
 from flask import Flask, request, make_response,jsonify
 import numpy as np
@@ -17,7 +17,7 @@ app = Flask(__name__,static_url_path='')
 
 def preprocess_img(img,target_size=(299,299)):
     if (img.shape[2] == 4):
-        img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)    
+        img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
     img = cv2.resize(img,target_size)
     img = np.divide(img,255.)
     img = np.subtract(img,0.5)
@@ -25,7 +25,7 @@ def preprocess_img(img,target_size=(299,299)):
     return img
 
 def load_im_from_url(url):
-    requested_url = urlopen(Request(url,headers={'User-Agent': 'Mozilla/5.0'})) 
+    requested_url = urlopen(Request(url,headers={'User-Agent': 'Mozilla/5.0'}))
     image_array = np.asarray(bytearray(requested_url.read()), dtype=np.uint8)
     print (image_array.shape)
     print (image_array)
@@ -40,7 +40,7 @@ def load_im_from_system(url):
     #image_array = np.asarray(bytearray(image_array), dtype=np.uint8)
     image_array = np.fromstring(image_array, np.uint8)
     image_array = cv2.imdecode(image_array, -1)
-    return image_array    
+    return image_array
 
 def predict(img):
     img=preprocess_img(img)
@@ -90,4 +90,3 @@ def root():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
-
