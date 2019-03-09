@@ -1,13 +1,13 @@
 # DeepClassifyML
 
-# About
+## About
 
 Implementation using tranfer learning to classify lung diseases.
 
-# Installation
+## Installation
 
-# Model
+## Model
 
-# Running It
+## Running It
 
-# Credits
+## Credits
