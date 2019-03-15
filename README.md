@@ -39,16 +39,4 @@ There are currently two ways of running this and obtaining predictions.
 
 Based off [this]() Image Classifer Web Application. 
 Feel free to open up an issue or contribute to the project.
-=======
-## About
 
-Implementation using tranfer learning to classify lung diseases.
-
-## Installation
-
-## Model
-
-## Running It
-
-## Credits
->>>>>>> e9f3ab5264216ae03c5b9fd39c6de7753b66be1d
