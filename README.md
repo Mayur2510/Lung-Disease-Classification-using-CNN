@@ -1,6 +1,6 @@
 # DeepClassifyML
 
-<<<<<<< HEAD
+
 A Web Application made with Flask to classify Respiratory Diseases from Chest X-rays
 
 ## Requirements
